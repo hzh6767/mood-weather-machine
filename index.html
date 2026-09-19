@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Select a mood and receive an entirely fictional local weather forecast.">
+  <title>Mood Weather Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mood-serene">
+  <main class="app-shell">
+    <header class="topbar"><a class="brand" href=".">MOOD<span>/</span>WEATHER</a><span class="live"><i aria-hidden="true"></i> fictional bureau online</span></header>
+    <section class="intro"><p class="kicker">forecasting feelings since five minutes ago</p><h1>What is the weather<br><em>inside you?</em></h1><p class="subhead">Pick the emotional climate. The bureau will invent a forecast with suspicious confidence.</p></section>
+
+    <section class="machine" aria-label="Mood weather generator">
+      <div class="mood-picker">
+        <h2>Choose a mood</h2>
+        <div class="mood-grid" role="group" aria-label="Moods">
+          <button class="mood-card selected" data-mood="serene" type="button"><span class="mood-icon">◌</span><span>serene</span><small>quietly floating</small></button>
+          <button class="mood-card" data-mood="chaotic" type="button"><span class="mood-icon">✹</span><span>chaotic</span><small>all tabs open</small></button>
+          <button class="mood-card" data-mood="cozy" type="button"><span class="mood-icon">⌂</span><span>cozy</span><small>blanket weather</small></button>
+          <button class="mood-card" data-mood="electric" type="button"><span class="mood-icon">ϟ</span><span>electric</span><small>ideas sparking</small></button>
+          <button class="mood-card" data-mood="wistful" type="button"><span class="mood-icon">☾</span><span>wistful</span><small>looking out windows</small></button>
+        </div>
+        <button class="forecast-button" id="forecast" type="button">Generate my forecast <span aria-hidden="true">→</span></button>
+      </div>
+
+      <div class="forecast" aria-live="polite">
+        <div class="sky" id="sky" aria-hidden="true"><span class="sun"></span><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="spark spark-a">✦</span><span class="spark spark-b">·</span></div>
+        <div class="forecast-copy"><p class="forecast-label">YOUR INNER FORECAST / <span id="day">TODAY</span></p><div class="temperature"><strong id="temperature">72°</strong><span id="condition">softly luminous</span></div><p id="summary">A calm front is moving through. Expect long exhales and one excellent idea arriving without an appointment.</p><div class="details"><span><b id="wind">4</b> mph<br><small>wind of change</small></span><span><b id="chance">18</b>%<br><small>chance of drama</small></span><span><b id="visibility">∞</b><br><small>visibility</small></span></div></div>
+      </div>
+    </section>
+    <footer>Forecasts are fictional. Your feelings are not.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
