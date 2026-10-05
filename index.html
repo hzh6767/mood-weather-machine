@@ -9,18 +9,18 @@
 </head>
 <body class="mood-serene">
   <main class="app-shell">
-    <header class="topbar"><a class="brand" href=".">MOOD<span>/</span>WEATHER</a><span class="live"><i aria-hidden="true"></i> fictional bureau online</span></header>
+    <header class="topbar"><a class="brand" href="index.html">MOOD<span>/</span>WEATHER</a><span class="live"><i aria-hidden="true"></i> fictional bureau online</span></header>
     <section class="intro"><p class="kicker">forecasting feelings since five minutes ago</p><h1>What is the weather<br><em>inside you?</em></h1><p class="subhead">Pick the emotional climate. The bureau will invent a forecast with suspicious confidence.</p></section>
 
     <section class="machine" aria-label="Mood weather generator">
       <div class="mood-picker">
         <h2>Choose a mood</h2>
-        <div class="mood-grid" role="group" aria-label="Moods">
-          <button class="mood-card selected" data-mood="serene" type="button"><span class="mood-icon">◌</span><span>serene</span><small>quietly floating</small></button>
-          <button class="mood-card" data-mood="chaotic" type="button"><span class="mood-icon">✹</span><span>chaotic</span><small>all tabs open</small></button>
-          <button class="mood-card" data-mood="cozy" type="button"><span class="mood-icon">⌂</span><span>cozy</span><small>blanket weather</small></button>
-          <button class="mood-card" data-mood="electric" type="button"><span class="mood-icon">ϟ</span><span>electric</span><small>ideas sparking</small></button>
-          <button class="mood-card" data-mood="wistful" type="button"><span class="mood-icon">☾</span><span>wistful</span><small>looking out windows</small></button>
+        <div class="mood-grid" role="radiogroup" aria-label="Moods">
+          <button class="mood-card selected" data-mood="serene" type="button" role="radio" aria-checked="true"><span class="mood-icon" aria-hidden="true">◌</span><span>serene</span><small aria-hidden="true">quietly floating</small></button>
+          <button class="mood-card" data-mood="chaotic" type="button" role="radio" aria-checked="false"><span class="mood-icon" aria-hidden="true">✹</span><span>chaotic</span><small aria-hidden="true">all tabs open</small></button>
+          <button class="mood-card" data-mood="cozy" type="button" role="radio" aria-checked="false"><span class="mood-icon" aria-hidden="true">⌂</span><span>cozy</span><small aria-hidden="true">blanket weather</small></button>
+          <button class="mood-card" data-mood="electric" type="button" role="radio" aria-checked="false"><span class="mood-icon" aria-hidden="true">ϟ</span><span>electric</span><small aria-hidden="true">ideas sparking</small></button>
+          <button class="mood-card" data-mood="wistful" type="button" role="radio" aria-checked="false"><span class="mood-icon" aria-hidden="true">☾</span><span>wistful</span><small aria-hidden="true">looking out windows</small></button>
         </div>
         <button class="forecast-button" id="forecast" type="button">Generate my forecast <span aria-hidden="true">→</span></button>
       </div>
@@ -32,6 +32,7 @@
     </section>
     <footer>Forecasts are fictional. Your feelings are not.</footer>
   </main>
+  <script src="forecast-core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

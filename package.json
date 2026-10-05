@@ -1,0 +1,18 @@
+{
+  "name": "mood-weather-machine",
+  "version": "1.0.0",
+  "description": "A responsive, offline browser toy that turns five moods into fictional weather forecasts",
+  "main": "forecast-core.js",
+  "scripts": {
+    "check": "node --check forecast-core.js && node --check app.js",
+    "test": "node --test tests/forecast-core.test.js tests/browser-scripts.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzh6767/mood-weather-machine"
+  },
+  "keywords": ["browser-toy", "weather", "mood", "offline", "zero-dependency"],
+  "author": "无聊玩玩 (hzh6767)",
+  "license": "MIT",
+  "private": true
+}
