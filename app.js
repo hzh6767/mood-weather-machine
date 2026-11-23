@@ -46,5 +46,12 @@ document.querySelector('.mood-grid').addEventListener('keydown', (event) => {
   cards[next].focus();
   selectMood(cards[next]);
 });
-document.querySelector('#forecast').addEventListener('click', () => { renderForecast(); document.querySelector('.forecast').animate([{ transform: 'scale(.985)' }, { transform: 'scale(1)' }], { duration: 360, easing: 'ease-out' }); });
+document.querySelector('#forecast').addEventListener('click', () => {
+  renderForecast();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelector('.forecast').animate?.(
+    [{ transform: 'scale(.985)' }, { transform: 'scale(1)' }],
+    { duration: 360, easing: 'ease-out' }
+  );
+});
 renderForecast();
